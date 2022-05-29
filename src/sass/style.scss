@@ -1,0 +1,83 @@
+@use 'utilities/sizes';
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	position: relative;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	min-height: 4em;
+	background-color: rgb(204, 113, 113);
+	color: #000;
+
+	&__left-box {
+		min-width: 3e;
+		margin: 0 1em;
+		font-size: 1.8rem;
+	}
+
+	&__right-box {
+		font-size: 2rem;
+	}
+
+	&__bars-icon {
+		padding: 0.5em 0.8em;
+	}
+
+	&__items-box {
+		position: absolute;
+		top: 4em;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		// transform: translate(100%);
+	}
+
+	&__item {
+		width: 100%;
+		margin-bottom: 2em;
+		list-style: none;
+
+		&:first-child {
+			margin-top: 10em;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+			font-size: 2.2rem;
+		}
+	}
+}
