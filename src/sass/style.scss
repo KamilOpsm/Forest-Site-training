@@ -14,70 +14,107 @@ html {
 	scroll-behavior: smooth;
 }
 
-body {
-	position: relative;
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
-}
+//  <--  Navigation starts here  --->
 
 .nav {
-	position: fixed;
+	position: sticky;
 	top: 0;
-	left: 0;
-	right: 0;
-	max-width: 1200px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto;
-	min-height: 4em;
-	background-color: rgb(204, 113, 113);
-	color: #000;
+	background-color: rgb(241, 240, 240);
 
 	&__left-box {
-		min-width: 3e;
 		margin: 0 1em;
-		font-size: 1.8rem;
-	}
-
-	&__right-box {
-		font-size: 2rem;
+		font-size: 2.7rem;
 	}
 
 	&__bars-icon {
-		padding: 0.5em 0.8em;
+		padding: 0.8em 1em;
+		font-size: 2.7rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__items-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+		align-items: center;
+		transform: translate(100%);
 	}
 
 	&__items-box {
-		position: absolute;
-		top: 4em;
-		left: 0;
-		right: 0;
-		height: 100vh;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		flex-direction: column;
-		// transform: translate(100%);
+		width: 100%;
 	}
 
 	&__item {
-		width: 100%;
-		margin-bottom: 2em;
+		margin-top: 2.5em;
+		font-size: 2.5rem;
+		text-align: center;
 		list-style: none;
 
-		&:first-child {
-			margin-top: 10em;
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+}
+
+//  <---  header starts hete  --->
+
+.header {
+	&__img {
+		position: relative;
+		height: 90vh;
+		background-image: url(/dist/img/header_640.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 0;
+	}
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -10;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		z-index: 10;
+	}
+
+	&__text-box {
+		padding: 2em;
+		color: #fff;
+
+		h1 {
+			font-size: 5rem;
+			font-weight: 500;
 		}
 
-		a {
-			text-decoration: none;
-			color: #000;
-			font-size: 2.2rem;
+		p {
+			margin-bottom: 0.4em;
+			font-size: 3rem;
+			font-weight: 200;
 		}
 	}
 }
