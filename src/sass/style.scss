@@ -238,10 +238,64 @@ html {
 	&__card {
 		max-width: 325px;
 		max-height: 450px;
-		box-shadow: 0 0 .5em rgb(150, 150, 150);
+		box-shadow: 0 0 0.5em rgb(150, 150, 150);
 		border-radius: 5px;
-		padding: 3em;
-		margin: 1em 0;
+		padding: 3em 4em;
+		margin: 1.5em 0;
 		text-align: center;
+	}
+
+	// <--- Card top starts here  --->
+
+	&__card-title {
+		font-size: 2rem;
+		font-weight: 300;
+		margin-bottom: 0.5em;
+	}
+
+	&__card-price {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 0.5em;
+
+		.dolar {
+			font-weight: 700;
+			font-size: 3rem;
+		}
+
+		.price-text {
+			position: relative;
+			top: 4px;
+			font-size: 3.3rem;
+			font-weight: 700;
+		}
+	}
+
+	//  <--- Card middle starts here  --->
+
+	&__card-middle {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		.fa-check {
+			margin-right: 0.5em;
+			color: rgb(139, 232, 0);
+			font-size: 1.4rem;
+		}
+
+		.minus {
+			color: rgb(165, 165, 165);
+
+			.fa-minus {
+				margin-right: 0.5em;
+			}
+		}
+
+		p {
+			margin-bottom: 0.5em;
+			font-size: 1.8rem;
+			font-weight: 300;
+		}
 	}
 }
