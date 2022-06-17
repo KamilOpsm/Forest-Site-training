@@ -241,7 +241,7 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 260px;
+		width: 280px;
 		margin: 3em 2em;
 		border-radius: 5px;
 		box-shadow: 0 0 10px rgb(100, 100, 100);
@@ -252,7 +252,7 @@ html {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 170px;
+		width: 180px;
 	}
 
 	&__card-top {
@@ -320,17 +320,49 @@ html {
 //  <---  footer starts here  --->
 
 .footer {
+	padding-top: 1.5em 0;
+	background-color: rgb(238, 238, 238);
+
 	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
 		max-width: 1400px;
 		margin: 0 auto;
+		padding: 3em 2em;
 	}
 
-	&__top {
-		display: flex;
-		justify-content: center;
-		margin: 0 auto;
-		align-items: flex-start;
-		width: 1400px;
-		background-color: red;
+	&__logo {
+		font-size: 3.5rem;
+		margin-bottom: 1.5em;
+	}
+
+	&__aboutus,
+	&__company,
+	&__documents {
+		margin-bottom: 2em;
+		.title {
+			font-size: 2.2rem;
+			margin-bottom: 1.2em;
+		}
+
+		.link {
+			margin-bottom: 1.5em;
+
+			a {
+				font-size: 1.6rem;
+				text-decoration: none;
+				color: #9d9d9d;
+			}
+		}
+	}
+
+	&__bottom {
+		padding: 2.5em 0;
+
+		p {
+			font-size: 1.6rem;
+			text-align: center;
+		}
 	}
 }
