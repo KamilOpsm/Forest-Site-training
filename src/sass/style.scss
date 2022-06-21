@@ -98,7 +98,6 @@ html {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: center;
 		max-width: 1400px;
 		margin: 0 auto;
 		height: 100%;
@@ -106,7 +105,7 @@ html {
 	}
 
 	&__text-box {
-		padding: 2em;
+		margin-left: 4em;
 		color: #fff;
 
 		h1 {
@@ -125,22 +124,21 @@ html {
 //  <---  about-us starts here  --->
 
 .aboutus {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	min-width: 300px;
-	margin: 0 auto;
-	padding: 0 4em;
-
 	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 4em;
 	}
 
 	&__title {
 		padding: 1.2em 0 0.8em 0;
 		font-size: 2.8rem;
 		font-weight: 300;
+		text-align: center;
 		text-transform: uppercase;
 	}
 
@@ -157,7 +155,7 @@ html {
 		font-weight: 300;
 	}
 
-	img {
+	&__img {
 		width: 100%;
 	}
 }
@@ -366,13 +364,12 @@ html {
 @media (min-width: 576px) {
 	.header {
 		&__img {
-			height: 60vh;
+			height: 50vh;
 		}
 
 		&__text-box {
 			h1 {
 				font-size: 3.5rem;
-				font-weight: 500;
 			}
 
 			p {
@@ -386,14 +383,34 @@ html {
 	.header {
 		&__text-box {
 			h1 {
-				font-size: 5rem;
-				font-weight: 500;
+				font-size: 4rem;
 			}
 
 			p {
 				margin-bottom: 0;
-				font-size: 4rem;
+				font-size: 3rem;
 			}
+		}
+	}
+
+	.aboutus {
+		&__box {
+			display: flex;
+			align-items: flex-start;
+			text-align: left;
+		}
+
+		&__img {
+			width: 50%;
+			max-height: 350px;
+		}
+
+		&__text {
+			margin-left: 5em;
+		}
+
+		&__article-title {
+			margin-top: 0;
 		}
 	}
 }
@@ -403,24 +420,24 @@ html {
 		&__img {
 			background-image: url('/dist/img/header_1280.jpg');
 		}
-	}
-}
-
-@media (min-width: 1200px) {
-	.header {
-		&__text {
-			align-items: flex-start;
-		}
 
 		&__text-box {
-			margin-left: 50px;
 			h1 {
+				font-size: 4.5rem;
 				font-weight: 700;
 			}
 
 			p {
-				font-size: 2.5rem;
+				font-size: 3.5rem;
 			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.header {
+		&__text-box {
+			margin-left: 0;
 		}
 	}
 }
